@@ -33,7 +33,6 @@
 import os
 import glob
 import re
-# import copy
 import getopt
 import sys
 import string
@@ -558,7 +557,7 @@ Example:
         if run_build:
             env = Environment(tools)
             if env.success:
-                env.get_env(os.environ)
+                env.get_env(True)
                 build_type = os.getenv('PG_BUILD_TYPE')
 
                 if not quick_build:
